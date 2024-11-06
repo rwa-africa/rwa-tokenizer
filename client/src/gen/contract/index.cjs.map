@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.cjs",
+  "sourceRoot": "../../../../../../../Downloads/midnight/compactc-macos/lib/",
+  "sources": ["midnight/asset_manager.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;GA2CC;EA3CD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GA2CC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+}

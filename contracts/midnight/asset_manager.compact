@@ -1,0 +1,44 @@
+include "std";
+
+enum Gender { male, female}
+
+export struct Personel {
+    uuid: Opaque<"string">,
+    firstName: Opaque<"string">,
+    lastName: Opaque<"string">,
+    birthday: Opaque<"string">,
+    birthplace: Opaque<"string">,
+    gender: Gender,
+    agencyAffiliation: Opaque<"string">,
+}
+
+enum Category { Land, building}
+
+export struct Property {
+    uuid: Opaque<"string">,
+    name: Opaque<"string">,
+    type: Category,
+    coordinates: Opaque<"string">,
+    currentOwner: Opaque<"string">,
+    registeredOn: Opaque<"string">,
+}
+
+enum Role { Notary, Owner, Buyer}
+
+export struct Agency {
+    name: Opaque<"string">,
+    jurisdiction: Opaque<"string">,
+    role: Role,
+}
+
+enum Party { Witness, Government}
+
+export struct Transaction {
+    property: Property,
+    buyer: Personel,
+    seller: Personel,
+    notary: Personel,
+    paries: Party,
+    deedDate: Opaque<"string">,
+    transferDate: Opaque<"string">,
+}
