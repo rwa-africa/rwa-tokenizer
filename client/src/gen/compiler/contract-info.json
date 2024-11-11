@@ -1,4 +1,258 @@
 {
   "circuits": [
+    {
+      "name": "add_asset",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "asset",
+          "type": {
+            "type-name": "Struct",
+            "name": "Asset",
+            "elements": [
+              {
+                "name": "uuid",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "type",
+                "type": {
+                  "type-name": "Enum",
+                  "name": "Category",
+                  "elements": [
+                    "Land",
+                    "building"
+                  ]
+                }
+              },
+              {
+                "name": "coordinates",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "currentOwner",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "registeredOn",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "Uint8Array"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    },
+    {
+      "name": "get_asset",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "id",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    },
+    {
+      "name": "update_asset",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "asset",
+          "type": {
+            "type-name": "Struct",
+            "name": "Asset",
+            "elements": [
+              {
+                "name": "uuid",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "type",
+                "type": {
+                  "type-name": "Enum",
+                  "name": "Category",
+                  "elements": [
+                    "Land",
+                    "building"
+                  ]
+                }
+              },
+              {
+                "name": "coordinates",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "currentOwner",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "registeredOn",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "Uint8Array"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    },
+    {
+      "name": "list_assets",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "owner",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    },
+    {
+      "name": "transfer_asset",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "asset",
+          "type": {
+            "type-name": "Struct",
+            "name": "Asset",
+            "elements": [
+              {
+                "name": "uuid",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "type",
+                "type": {
+                  "type-name": "Enum",
+                  "name": "Category",
+                  "elements": [
+                    "Land",
+                    "building"
+                  ]
+                }
+              },
+              {
+                "name": "coordinates",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "currentOwner",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "string"
+                }
+              },
+              {
+                "name": "registeredOn",
+                "type": {
+                  "type-name": "Opaque",
+                  "tsType": "Uint8Array"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "sourceOwner",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        },
+        {
+          "name": "targetOwner",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    },
+    {
+      "name": "delete_asset",
+      "pure": true,
+      "arguments": [
+        {
+          "name": "id",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    }
   ]
 }

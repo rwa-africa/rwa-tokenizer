@@ -1,0 +1,33 @@
+include "std";
+include "/Users/ntafie/Dev-Studios/active-projects/rwa-tokenizer/contracts/midnight/asset";
+
+ledger assets: Map<Opaque<"string">, Asset>; 
+
+constructor() {}
+
+
+witness local_secret_key(): Bytes<32>;
+
+export circuit add_asset(asset: Asset): Void {
+    return ;
+}
+
+export circuit get_asset(id: Opaque<"string">): Void {
+    return ;
+}
+
+export circuit update_asset(asset: Asset): Void {
+    return ;
+}
+
+export circuit list_assets(owner: Opaque<"string">): Void {
+    return ;
+}
+
+export circuit transfer_asset(asset: Asset, sourceOwner: Opaque<"string">, targetOwner: Opaque<"string">): Void {
+    return ;
+}
+
+export circuit delete_asset(id: Opaque<"string">): Void {
+    return ;
+}

@@ -1,12 +1,11 @@
-include "std";
 
 enum Gender { male, female}
 
-export struct Personel {
+export struct Person {
     uuid: Opaque<"string">,
     firstName: Opaque<"string">,
     lastName: Opaque<"string">,
-    birthday: Opaque<"string">,
+    birthday: Opaque<"Uint8Array">,
     birthplace: Opaque<"string">,
     gender: Gender,
     agencyAffiliation: Opaque<"string">,
@@ -14,13 +13,13 @@ export struct Personel {
 
 enum Category { Land, building}
 
-export struct Property {
+export struct Asset {
     uuid: Opaque<"string">,
     name: Opaque<"string">,
     type: Category,
     coordinates: Opaque<"string">,
     currentOwner: Opaque<"string">,
-    registeredOn: Opaque<"string">,
+    registeredOn: Opaque<"Uint8Array">,
 }
 
 enum Role { Notary, Owner, Buyer}
@@ -34,11 +33,11 @@ export struct Agency {
 enum Party { Witness, Government}
 
 export struct Transaction {
-    property: Property,
-    buyer: Personel,
-    seller: Personel,
-    notary: Personel,
-    paries: Party,
-    deedDate: Opaque<"string">,
-    transferDate: Opaque<"string">,
+    asset: Asset,
+    buyer: Person,
+    seller: Person,
+    notary: Person,
+    witnesses: Vector<0, Party>,
+    deedDate: Opaque<"Uint8Array">,
+    transferDate: Opaque<"Uint8Array">,
 }
