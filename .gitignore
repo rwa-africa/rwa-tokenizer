@@ -14,7 +14,7 @@ contracts/coti/dependencies/
 contracts/coti/remappings.txt
 contracts/coti/soldeer.lock
 
-.idea/vcs.xml
+.idea/
 
 # Dotenv file
 .env
